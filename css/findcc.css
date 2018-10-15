@@ -64,11 +64,13 @@ body{
 	color:inherit;
 	width:50px;
 	height:50px;
-	font-size:24px;
+	padding:4px;
+	font-size:31px;
 	background:#fff;
+	color:#127EF5;
 	line-height:38px;
 	border-radius:50%;
-	border:4px solid;
+	border:5px solid;
 	text-align:center;
 	position:absolute;
 	text-decoration:none;
@@ -86,36 +88,39 @@ body{
 	left:250px;
 	width:90px;
 	height:90px;
-	font-size:42px;
+	font-size:70px;
+	color:#FC2C0C;
 	line-height:80px;
 }
 .social-media-wrap .social-media .social-media-lnk:nth-child(3){
-	top:90px;
+	top:85px;
 	right:15px;
 	width:80px;
 	height:80px;
-	font-size:38px;
-	line-height:70px;
+	font-size:59px;
+	color:#1B7BF5;
+	line-height:80px;
 }
 .social-media-wrap .social-media .social-media-lnk:nth-child(4){
 	right:-30px;
 	bottom:230px;
-	width:75px;
-	height:75px;
-	font-size:36px;
+	width:80px;
+	height:80px;
+	font-size:55px;
 	line-height:60px;
+	color:#FF0000;
 }
 .social-media-wrap .social-media .social-media-lnk:hover{
-	color:#444;
+	color:#F2E300;
 }
 .social-media-wrap .social-dot{
 	width:18px;
 	height:18px;
 	position:absolute;
 	border-radius:50%;
-	background:#f59b9d;
+	background:#3AFF35;
 	display:inline-block;
-	border:1px solid #f6898e;
+	border:1px solid #92F6FF;
 }
 .social-media-wrap .social-dot:nth-child(1){
 	top:12px;
@@ -152,7 +157,7 @@ body{
 	position:absolute;
 	border:3px solid;
 	border-bottom:none;
-	box-shadow:0 -3px #c4cfd5 inset;
+	box-shadow:0 -3px #92F6FF inset;
 }
 .social-media-wrap .lamp .lamp-bottom:before,
 .social-media-wrap .lamp .lamp-bottom:after{
@@ -183,7 +188,7 @@ body{
 	height:25px;
 	position:absolute;
 	border-radius:50%;
-	background:#858688;
+	background:#92F6FF;
 	border:1px solid #68696b;
 }
 .social-media-wrap .lamp .lamp-stand:before,
