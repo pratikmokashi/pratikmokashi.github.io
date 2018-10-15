@@ -1,97 +1,93 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="./css/style.css"
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-    <script>
 
-        var colors = new Array(
-          [62,35,255],
-          [60,255,60],
-          [255,35,98],
-          [45,175,230],
-          [255,0,255],
-          [255,128,0]);
+  <link rel="stylesheet" href="./css/findcc.css">
+<div class="mhn-switch">
 
-          var step = 0;
-//color table indices for:
-// current color left
-// next color left
-// current color right
-// next color right
-          var colorIndices = [1,2,3,4];
+<label for="switch" class="label">My Screen</label>
+<input id="switch" type="checkbox" class="toggle"><label for="switch" class="switch">&nbsp;</label>
 
-//transition speed
-var gradientSpeed = 0.002;
+<div class="social-media-wrap">
+	<div class="social-media">
+		<div class="social-dot-wrap">
+			<span class="social-dot"></span>
+			<span class="social-dot"></span>
+			<span class="social-dot"></span>
+			<span class="social-dot"></span>
+		</div>
+		<div class="social-media-lnk-wrap">
+			<a href="https://www.linkedin.com/in/pratik-mokashi-27743011b/" target="_blank" class="social-media-lnk"><i class="fa fa-linkedin"></i></a>
+			<a href="https://www.reddit.com/user/kitarp19" target="_blank" class="social-media-lnk"><i class="fa fa-reddit"></i></a>
+			<a href="https://twitter.com/mokashi_pratik" target="_blank" class="social-media-lnk"><i class="fa fa-twitter"></i></a>
+			<a href="https://www.youtube.com/user/MrReasonalways" target="_blank" class="social-media-lnk"><i class="fa fa-youtube"></i></a>
+		</div>
+	</div>
+	<div class="lamp">
+		<div class="lamp-top">
+			<div class="back"></div>
+			<div class="light"></div>
+		</div>
+		<div class="lamp-stand"></div>
+		<div class="lamp-bottom"></div>
+	</div>
+	<div class="designer">
+		<div class="head">
+			<div class="hair"><div class="hair-dtl"></div></div>
+			<div class="face">
+				<div class="face-dtl">
+					<div class="eye lt"></div>
+					<div class="eye rt"></div>
+				</div>
+			</div>
+			<div class="ears"></div>
+			<div class="neck"></div>
+		</div>
+		<div class="head-phone"></div>
+		<div class="laptop">
+			<a href="https://codepen.io/khadkamhn/" target="_blank"><i class="fa fa-codepen"></i></a>
+			<div class="fingers">
+				<div class="figers-dtl"></div>
+				<div class="figers-dtl"></div>
+				<div class="figers-dtl"></div>
+				<div class="figers-dtl"></div>
+			</div>
+			<div class="screen">
+				<div class="browser">
+					<div class="browser-head clearfix">
+						<div class="pull-left">
+							<span class="win-btn win-red"></span>
+							<span class="win-btn win-yel"></span>
+							<span class="win-btn win-gre"></span>
+						</div>
+					</div>
 
-function updateGradient()
-{
 
-if ( $===undefined ) return;
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="coffee">
+		<div class="vapour">
+			<div class="vapour-dtl">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+			<div class="vapour-dtl">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+			<div class="vapour-dtl">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</div>
+		</div>
+		<div class="cup"></div>
+	</div>
+</div>
 
-var c0_0 = colors[colorIndices[0]];
-var c0_1 = colors[colorIndices[1]];
-var c1_0 = colors[colorIndices[2]];
-var c1_1 = colors[colorIndices[3]];
-
-var istep = 1 - step;
-var r1 = Math.round(istep * c0_0[0] + step * c0_1[0]);
-var g1 = Math.round(istep * c0_0[1] + step * c0_1[1]);
-var b1 = Math.round(istep * c0_0[2] + step * c0_1[2]);
-var color1 = "rgb("+r1+","+g1+","+b1+")";
-
-var r2 = Math.round(istep * c1_0[0] + step * c1_1[0]);
-var g2 = Math.round(istep * c1_0[1] + step * c1_1[1]);
-var b2 = Math.round(istep * c1_0[2] + step * c1_1[2]);
-var color2 = "rgb("+r2+","+g2+","+b2+")";
-
-$('#gradient').css({
- background: "-webkit-gradient(linear, left top, right top, from("+color1+"), to("+color2+"))"}).css({
-  background: "-moz-linear-gradient(left, "+color1+" 0%, "+color2+" 100%)"});
-
-step += gradientSpeed;
-if ( step >= 1 )
-{
-  step %= 1;
-  colorIndices[0] = colorIndices[1];
-  colorIndices[2] = colorIndices[3];
-
-  //pick two new target color indices
-  //do not pick the same as the current one
-  colorIndices[1] = ( colorIndices[1] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-  colorIndices[3] = ( colorIndices[3] + Math.floor( 1 + Math.random() * (colors.length - 1))) % colors.length;
-
-}
-}
-
-setInterval(updateGradient,10);
-</script>
-  </head>
-
-<section>
-  </body>
-  <div>
-   <div id="gradient" />
- </div>
- </div >
-      <div class="centered">Hello!</div>
-      <div class="centeredsub">My name is Pratik!</div>
-      <div class="typewriter">
-        <h1>{I Build,Game,Travel %%%%%%%%%%%S}</h1>
-      </div>
-      <div class="wrapper">
-      <div class="button2">
-        <button type="button" class="btn btn-outline-light">Find me</button>
-        <button type="button" class="btn btn-outline-light">Projects</button>
-      </div>
-      </div>
-  </body>
-
-</html>
+</div>
